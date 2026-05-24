@@ -9,7 +9,7 @@ router.post('/login', (req, res) => {
 
   const query = `SELECT * FROM users WHERE username = '${username}' AND password = '${password}'`;
   
-  db.execute(query, (err, results) => {
+  db.execute(query, (err, results) => {  
     if (err) throw err;
     res.json(results);
   });
